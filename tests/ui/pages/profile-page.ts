@@ -15,7 +15,7 @@ class SearchPage {
   
   constructor(page: Page) {
     this.page = page;
-    this.bookAdminLabel = page.getByText('Eloquent JavaScript, Second Edition');
+    this.bookAdminLabel = page.getByText('Speaking JavaScript');
     this.booksCollectionRequestRegExp = new RegExp(apiPaths.account);
     this.bookUserLabel = page.getByText('Understanding ECMAScript 6');
     this.gridRow1 = page.locator('div:nth-child(1) > .rt-tr > div:nth-child(2)').last();
@@ -44,7 +44,7 @@ class SearchPage {
 
   async checkLoggedIn() {
     await expect(this.notLoggedInLabel).not.toBeVisible();
-    // await expect(this.notLoggedInLabel).toBeVisible();
+    //await expect(this.notLoggedInLabel).toBeVisible();
   }
 
   async checkLoggedInUser() {

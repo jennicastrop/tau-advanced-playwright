@@ -10,7 +10,10 @@
     "test-ui-auth-admin": "npx playwright test profile-stored-auth-multi-role-admin.spec.ts --project=chromium-auth ",
     "test-ui-auth-user": "npx playwright test profile-stored-auth-multi-role-user.spec.ts --project=chromium-auth ",
     "test-ui-auth": "npx playwright test profile-stored-auth-multi-role-example.spec.ts --project=chromium-auth ",
-    "test-vrt": "npx playwright test visual-regression.spec.ts --project=chromium"
+    "test-vrt": "npx playwright test visual-regression.spec.ts --project=chromium",
+    "test-ui-auth-user-only": "AUTH_SETUP=auth-setup-user npx playwright test profile-stored-auth-multi-role-user.spec.ts --project=chromium-auth",
+    "test-ui-auth-admin-only": "AUTH_SETUP=auth-setup-admin npx playwright test profile-stored-auth-multi-role-admin.spec.ts --project=chromium-auth",
+    "test-ui-auth-admin-api": "AUTH_SETUP=auth-setup-admin-api npx playwright test profile-stored-auth-api-admin.spec.ts --project=chromium-auth"
   },
   "keywords": [],
   "author": "",
